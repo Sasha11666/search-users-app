@@ -1,6 +1,6 @@
 export async function getUsers(login) {
   const response = await fetch(
-    `https://api.github.com/search/users?q=${login}&sort=repositories&order=desc`
+    `https://api.github.com/search/users?q=${login} in:login&sort=repositories&order=desc`
   );
 
   if (!response.ok) {
